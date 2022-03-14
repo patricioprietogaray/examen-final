@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Final de Teleinformática</title>
+</head>
+<body>
+    <main>
+        <header>
+            <div class="encabezado">
+                <!-- <div class="logo">
+                    <img src="./rj45.jpeg" alt="" width="300px">
+                </div> -->
+                <div class="titulo">
+                    <h1>
+                        Examen final de Teleinformática
+                    </h1>
+                    <h2 style="text-align: center;">
+                        Profesor: Carlos Mazza  -  Alumno: Patricio Sebastián Prieto Garay
+                    </h2>
+                    <h2 style="text-align: center;">Año: 3° - 2022</h2>
+                </div>
+            </div>
+            
+            <nav>
+                <ul class="menuPrincipal" style="list-style-type: none;">
+                    <li><a href="">Brevemente ...</a>
+                        <ul style="list-style-type: none;">
+                            <li>
+                                <a href="#BreveOSI-TCPip">
+                                    Explique brevemente los modelos osi y tcp/ip y sus diferencias en la implementación de una red informática
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="">Cuadro comparativo ...</a>
+                        <ul style="list-style-type: none;">
+                            <li>
+                                <a href="#CuadroOSI-TCPip">Realice un cuadro camparativo entre los modelos conceptuales mencionando</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="">Encapsulamiento ...</a>
+                        <ul style="list-style-type: none;">
+                            <li>
+                                <a href="#Encapsulamiento">Explique el proceso de encapsulamiento y desencapsulamiento en la comunicación entre 2 sistemas ¿En donde se realiza la comunicación vertical y horizontal?
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="">Cliente-Servidor ...</a>
+                        <ul style="list-style-type: none;">
+                            <li>
+                                <a href="#ClienteServidor">Explicar el modelo cliente-servidor y cite 2 ejemplos
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#P2P">P2P ...</a>
+                        <ul style="list-style-type: none;">
+                            <li>
+                                <a href="#P2P">
+                                    Explicar el modelo P2P y cite 2 ejemplos
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section id="BreveOSI-TCPip">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <div class="imagen">
+                <img src="./rj45.jpeg" alt="" width="300px">
+            </div>
+            <br>
+            <h2>Explique brevemente los modelos osi y tcp/ip y sus diferencias en la implementación de una red informática:</h2>
+            <br>
+            <p>El modelo OSI cuanta con 7 capas las cuales se describirán en otro apartado, es un modelo teórico que adaptarán sus funcionalidades los distintos protocolos como el protocolo TCP/IP.</p>
+            <br>
+            <p>TCP/IP (Protocolo de Control de Transmisión/Protocolo de Internet) se basa en el modelo teórico DoD / DARPA (Agencia de Proyectos de Investigación Avanzados de Defensa – Departamento de Defensa de los Estados Unidos de América) y este esta basado en el modelo OSI (modelo de interconexión de sistemas abiertos es un modelo de referencia). El modelo OSI cuenta con 7 capas, mientras que TCP/IP (son dos protocolos: TCP: Establece la conexión y el intercambio de datos entre dos anfitriones e IP: Utiliza direcciones series de cuatro octetos con formato de punto decimal, como por ejemplo 192.168.100.1. Es la identificación única que tienen los dispositivos que se conectan a una red.) cuenta con 4 capas.</p>
+        </section>
+        <section id="CuadroOSI-TCPip">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <div class="imagen">
+                <img src="./tcpIP.webp" alt="" width="300px">
+            </div>
+            <br>
+            <h2>Realice un cuadro camparativo entre los modelos conceptuales mencionando:</h2>
+            <br><br>
+            <div id="GridContainer">
+                <div class="grid-items titleOSI">Capas OSI</div>
+                <div class="grid-items titleTCP">Capas TCP/IP</div>
+                <div class="grid-items titleFunc">Funcionalidades</div>
+                <div class="grid-items titleProtoc">Protocolo</div>
+                <div class="grid-items AplicacionOSI">Aplicación</div>
+                <div class="grid-items AplicacionTCP">Aplicación</div>
+                <div class="grid-items AplicacionOSIFunc">Servicio de red para aplicaciones</div>
+                <div class="grid-items AplicacionProtoc">HTTP</div>
+                <div class="grid-items PresentacionOSI">Presentación</div>
+                <div class="grid-items PresentacionOSIFunc">Transforma los datos, los encripta, desencripta y los comprime y descomprime</div>
+                <div class="grid-items SesionOSI">Sesión</div>
+                <div class="grid-items SesionOSIFunc">Establece, administra y cierra conexiones entre el host local y el host remoto (horizontal)</div>
+                <div class="grid-items TransporteOSI">Transporte</div>
+                <div class="grid-items TransporteTCP">Transporte</div>
+                <div class="grid-items TransporteOSIFunc">Controla el flujo de la red para que la conexión sea confiable</div>
+                <div class="grid-items TransporteProtoc">TCP</div>
+                <div class="grid-items RedOSI">Red</div>
+                <div class="grid-items RedTCP">Red</div>
+                <div class="grid-items RedOSIFunc">Direccionamiento y enrutamiento de los datagramas, direccionamiento, ruteo y control del tráfico</div>
+                <div class="grid-items RedProtoc">IP</div>
+                <div class="grid-items EnlaceDatosOSI">Enlace de Datos</div>
+                <div class="grid-items EnlaceTCP">Enlace</div>
+                <div class="grid-items EnlaceDatosOSIFunc">Direccionamiento físico y de medios para la transmisión de datos de forma confiable sobre la capa físisca. LLC o control de enlace lógico. MAC o control de acceso al medio. Aquí el software se comunica con el hardware por medio de los drivers o controladores.</div>
+                <div class="grid-items EnlaceDatosProtoc">IP</div>
+                <div class="grid-items FisicaOSI">Física</div>
+                <div class="grid-items FisicaFunc">Especificaciones electricas y mecánicas (Transmision de datos binarios)</div>
+                <div class="grid-items FisicaProtoc">803.11</div>
+            </div>
+        </section>
+        <section id="Encapsulamiento">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <!-- <div class="imagen">
+                <img src="./rj45.jpeg" alt="" width="300px">
+            </div> -->
+            <h2>Explique el proceso de encapsulamiento y desencapsulamiento en la comunicación entre 2 sistemas ¿En donde se realiza la comunicación vertical y horizontal?</h2>
+            <br><br>
+            <p>Un programa (software / Aplicación del usuario) envía un mensaje a un contacto por medio de internet. A continuación se describen los pasos:</p>
+            <br>
+            <ul>
+                <li>El mensaje está situado en la capa de aplicación. Esta capa se le añade una cabecera ICI para formar la PDU de la capa de aplicación y pasa a llamarse </li>
+                <br>
+                <li>El mensaje llegó a la capa de presentacion, esta capa añade su propia cabecera y sigue a la próxima capa.</li>
+                <br>
+                <li>En la capa de sesión, repite el procedimiento anterior (añadir su propia cabecera) y continua.</li>
+                <br>
+                <li>En las capas fisicas el paquete será direccionado debidamente hasta el receptor.</li>
+                <br>
+                <li>Cuando llega al receptor esta capa elimina la cabecera de su capa homologa.</li>
+                <br>
+                <li>Por ultimo el mensaje llega a la capa de aplicación del destino para entregar al usuario de manera comprensible.</li>
+            </ul>
+            <br>
+            <p>PDU o Unidad de Datos de Protocolo es la unidad de información transmitida entre capas, a lo que cada capa le agrega su encabezado como se muestra en la figura de la página anterior. De esta manera por cada capa se le agregan los encabezados pertinentes a la misma. En la capa 7 (aplicación), la capa 6 (presentación), y la capa 5 (sesión) los pdu de cada una de ellas se denominan datos. En la capa 4 (transporte) el pdu se denomina segmento, en la capa 3 (red) se denomina paquete. En la capa 2 (enlace) el pdu se denomina trama y por último en la capa 1 (física) el pdu son los bits que se transmitirán por el medio de comunicación sea por medio de un cable, radio o fibra óptica.</p>
+            <br>
+            <p>SDU o Unidad de Datos de Servicio, los datos que se envian a la capa de menor rango y antes de ser encapsulada se denomina SDU, una vez encapsulada se pasa a llamar PDU.</p>
+            <br>
+            <p>La comunicación se realiza en forma vertical en ambos sentidos, mientras que la comunicación horizontal se realiza en la capa de sesión, porque se tiene que comunicar con el host destino para establecer la comunicación.</p>
+        </section>
+        <section id="ClienteServidor">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <div class="imagen">
+                <img src="./Cliente_servidor.webp" alt="" width="300px">
+            </div>
+            <br>
+            <h2>Explicar el modelo cliente-servidor y cite 2 ejemplos</h2>
+            <br><br>
+            <p>El cliente con el servidor deben estar conectados ya sea a través de una red local metropolitana o por medio de la internet el cliente envía una petición o request hacia el servidor y este devolverá una respuesta o response al cliente. El rol del cliente es simplemente pedir información a al servidor y esperar la respuesta del server.</p>
+            <br>
+            <p>En cuanto al rol del servidor es responder las peticiones qué son proporcionadas por el cliente esto puede ser acceso a un recurso propio del servidor como por ejemplo el acceso a una base de datos otra tarea puede ser la ejecución y operaciones matemáticas complejas con el fin de utilizar el procesamiento del servidor el cual es un dispositivo más potente qué el que se encuentra del lado del cliente, un ejemplo mira descripto anteriormente es el acceso a un sitio web el cual proporcionará al usuario cierta información brindada por ese servidor.</p>
+            <br>
+            <p><strong>Ejemplo 1:</strong>Consulta de bases de datos. El servidor brindará el servicio de almacenamiento, borrado y consulta de datos que estan almacenados en forma local en el mismo. Mientras que los clientes accederán al servicio previa identificación del cliente y aceptación de este por parte del servidor. Según el usuario y sus permisos podrá consultar, agregar o borrar los registros en la base de datos.</p>
+            <br>
+            <p><strong>Ejemplo 2:</strong>Acceso al sitio web de un portal del tiempo, en este caso el cliente no tiene ningun tipo de acceso especial, solo visualizará los datos que se encuentran cargados. En caso de administrador ingresará y hará las modificaciones que sean requeridas. Todo por medio de la internet.</p>
+        </section>
+        <section id="P2P">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <div class="imagen">
+                <img src="./p2pBitcoin.jpg" alt="" width="300px">
+            </div>
+            <br>
+            <h2>Explicar el modelo P2P y cite 2 ejemplos</h2>
+            <br><br>
+            <p>El concepto de cliente/servidor no es igual a peer-to-peer, en este caso los ordenadores son iguales entre si, se conectan en forma directa compartiendo archivos, de forma tal que cada ordenador puede ser cliente y servidor a la vez, (entiéndase que no es lo mismo que cliente/servidor). Hay aplicaciones que se apoyan en los datos que se almacenan en un servidor, para identificar los hosts y la información que estos contienen. En sus comienzos internet fue P2P.</p>
+            <br>
+            <p>No existe un nodo central, hay un colectivo diversos de puntos de conexión, varios nodos se conectan entre si y estos a los clientes. Si un nodo se cae la red continua funcionando. El principio de una red descentralizada es la participación o adhesión.</p>
+            <br>
+            <p><strong>Ejemplo: </strong>Redes Torrent con el fin de compartir archivos y Redes Blockchain que se encargan de compartir información de los registros financieros de toda la red, de esta forma se evitan fraudes.</p>
+        </section>
+    </main>
+    <footer>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    </footer>
+</body>
+</html>
