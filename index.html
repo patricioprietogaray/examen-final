@@ -79,9 +79,26 @@
             <br>
             <h2>Explique brevemente los modelos osi y tcp/ip y sus diferencias en la implementación de una red informática:</h2>
             <br>
-            <p>El modelo OSI cuanta con 7 capas las cuales se describirán en otro apartado, es un modelo teórico que adaptarán sus funcionalidades los distintos protocolos como el protocolo TCP/IP.</p>
+            <p>El modelo OSI cuanta con 7 capas las cuales se describirán en otro apartado, es un modelo 
+                teórico (los modelos son teóricos), que adaptó sus funcionalidades al protocolo TCP/IP.</p>
             <br>
-            <p>TCP/IP (Protocolo de Control de Transmisión/Protocolo de Internet) se basa en el modelo teórico DoD / DARPA (Agencia de Proyectos de Investigación Avanzados de Defensa – Departamento de Defensa de los Estados Unidos de América) y este esta basado en el modelo OSI (modelo de interconexión de sistemas abiertos es un modelo de referencia). El modelo OSI cuenta con 7 capas, mientras que TCP/IP (son dos protocolos: TCP: Establece la conexión y el intercambio de datos entre dos anfitriones e IP: Utiliza direcciones series de cuatro octetos con formato de punto decimal, como por ejemplo 192.168.100.1. Es la identificación única que tienen los dispositivos que se conectan a una red.) cuenta con 4 capas.</p>
+            <p>TCP/IP (Protocolo de Control de Transmisión/Protocolo de Internet) se basa en el modelo 
+                teórico DoD / DARPA (Agencia de Proyectos de Investigación Avanzados de Defensa – Departamento 
+                de Defensa de los Estados Unidos de América) y este esta basado en el modelo OSI (modelo de 
+                interconexión de sistemas abiertos es un modelo de referencia). El modelo OSI creado en 1977
+                 cuenta con 7 capas, en las cuales se determina como será transformado una serie de datos que 
+                 puedan transmitirse, su ingreso, codificación, comunicacion, compresion, división para ser
+                 transmitidos por un medio físico y que al llegar a otro dispositivo pueda ser mostrado sin 
+                 errores.</p>
+                 <br>
+                 <p>En cambio TCP/IP también es un modelo pero devenido en protocolo, de hecho TCP/IP son dos
+                protocolos: <strong>TCP: </strong>Quién establece la conexión y el intercambio de datos 
+                entre dos anfitriones e <strong>IP: </strong>Utiliza direcciones series de cuatro 
+                octetos con formato de punto decimal, como por ejemplo 192.168.100.1. </p> 
+                <br>
+                <p>Es la identificación única que tienen los dispositivos 
+                que se conectan a una red). El protocolo TCP/IP cuenta con 4 capas las cuales serán explicadas
+                en otro apartado.</p>
         </section>
         <section id="CuadroOSI-TCPip">
             <br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -115,10 +132,9 @@
                 <div class="grid-items EnlaceDatosOSI">Enlace de Datos</div>
                 <div class="grid-items EnlaceTCP">Enlace</div>
                 <div class="grid-items EnlaceDatosOSIFunc">Direccionamiento físico y de medios para la transmisión de datos de forma confiable sobre la capa físisca. LLC o control de enlace lógico. MAC o control de acceso al medio. Aquí el software se comunica con el hardware por medio de los drivers o controladores.</div>
-                <div class="grid-items EnlaceDatosProtoc">IP</div>
+                <div class="grid-items EnlaceDatosProtoc">Ethernet/803.11</div>
                 <div class="grid-items FisicaOSI">Física</div>
                 <div class="grid-items FisicaFunc">Especificaciones electricas y mecánicas (Transmision de datos binarios)</div>
-                <div class="grid-items FisicaProtoc">803.11</div>
             </div>
         </section>
         <section id="Encapsulamiento">
@@ -128,27 +144,65 @@
             </div> -->
             <h2>Explique el proceso de encapsulamiento y desencapsulamiento en la comunicación entre 2 sistemas ¿En donde se realiza la comunicación vertical y horizontal?</h2>
             <br><br>
-            <p>Un programa (software / Aplicación del usuario) envía un mensaje a un contacto por medio de internet. A continuación se describen los pasos:</p>
+            <p>Antes de ello se debe aclarar los siguientes términos:</p>
             <br>
             <ul>
-                <li>El mensaje está situado en la capa de aplicación. Esta capa se le añade una cabecera ICI para formar la PDU de la capa de aplicación y pasa a llamarse </li>
+                <li><strong>SDU (Unidad de Datos de Servicio):</strong> Es el conjunto de datos que proviene 
+                    de la capa superior, aún no encapsulada en la capa actual denominada SDU, una vez encapsulada
+                se pasa a llamar PDU.</li>
                 <br>
-                <li>El mensaje llegó a la capa de presentacion, esta capa añade su propia cabecera y sigue a la próxima capa.</li>
+                <li><strong>PDU (Unidad de Datos de Protocolo):</strong> Es el conjunto de datos que 
+                    se transmite entre capas, a lo que a cada capa se 
+                    le agrega su encabezado como se muestra en la figura. De esta manera por 
+                    cada capa se le añaden los encabezados pertinentes a la misma. En la capa 7 (aplicación), 
+                    la capa 6 (presentación), y la capa 5 (sesión) los pdu de cada una de ellas se denominan datos. 
+                    En la capa 4 (transporte) el pdu se denomina segmento, en la capa 3 (red) se denomina paquete. 
+                    En la capa 2 (enlace) el pdu se denomina trama y por último en la capa 1 (física) el pdu son 
+                    los bits que se transmitirán por el medio de comunicación sea por medio de un cable, 
+                    radio o fibra óptica.</li>
                 <br>
-                <li>En la capa de sesión, repite el procedimiento anterior (añadir su propia cabecera) y continua.</li>
-                <br>
-                <li>En las capas fisicas el paquete será direccionado debidamente hasta el receptor.</li>
-                <br>
-                <li>Cuando llega al receptor esta capa elimina la cabecera de su capa homologa.</li>
-                <br>
-                <li>Por ultimo el mensaje llega a la capa de aplicación del destino para entregar al usuario de manera comprensible.</li>
+                <li><strong>ICI:</strong> Es la información de control de la interface.</li>                
             </ul>
             <br>
-            <p>PDU o Unidad de Datos de Protocolo es la unidad de información transmitida entre capas, a lo que cada capa le agrega su encabezado como se muestra en la figura de la página anterior. De esta manera por cada capa se le agregan los encabezados pertinentes a la misma. En la capa 7 (aplicación), la capa 6 (presentación), y la capa 5 (sesión) los pdu de cada una de ellas se denominan datos. En la capa 4 (transporte) el pdu se denomina segmento, en la capa 3 (red) se denomina paquete. En la capa 2 (enlace) el pdu se denomina trama y por último en la capa 1 (física) el pdu son los bits que se transmitirán por el medio de comunicación sea por medio de un cable, radio o fibra óptica.</p>
+            <p>
+                El intercambio de información entre capas OSI se produce cuando cada capa, en
+                caso de enviar el mensaje hacia otro host, envía la información a la siguiente y ésta 
+                se encarga de añadirle información sobre la capa, información final como otro tipo de información
+                relevante a la siguiente capa. 
+            </p>
             <br>
-            <p>SDU o Unidad de Datos de Servicio, los datos que se envian a la capa de menor rango y antes de ser encapsulada se denomina SDU, una vez encapsulada se pasa a llamar PDU.</p>
+            <p>Un programa (software / Aplicación del usuario) envía un mensaje a un contacto por medio de 
+                internet. A continuación se describen los pasos:</p>
             <br>
-            <p>La comunicación se realiza en forma vertical en ambos sentidos, mientras que la comunicación horizontal se realiza en la capa de sesión, porque se tiene que comunicar con el host destino para establecer la comunicación.</p>
+            <ul>
+                <li>Ahora hay que entregar la PDU a la capa de presentación para ello hay que 
+                    añadirla la correspondiente cabecera ICI y transformarla así en una IDU, la 
+                    cual se transmite a dicha capa.</li>
+                    <br>
+                <li>La capa de presentación recibe la IDU, le quita la cabecera y extrae la 
+                    información, es decir, la SDU, a esta le añade su propia cabecera (PCI) 
+                    constituyendo así la PDU de la capa de presentación.</li>
+                    <br>
+                <li>Esta PDU es transferida a su vez a la capa de sesión mediante el mismo proceso,
+                    repitiéndose así para todas las capas.</li>
+                    <br>
+                <li>Al llegar al nivel físico se envían los datos que son recibidos por la capa 
+                    física del receptor.</li>
+                    <br>
+                <li>Cada capa del receptor se ocupa de extraer la cabecera, que anteriormente había
+                    añadido su capa homóloga, interpretarla y entregar la PDU a la capa superior.</li>
+                <br>
+                <li>Finalmente llegará a la capa de aplicación la cual entregará el mensaje al 
+                    usuario. </li>
+            </ul>
+            <br>
+            <p>La comunicación se realiza en forma vertical en ambos sentidos, mientras que la 
+                comunicación horizontal se realiza en la capa de sesión, porque se tiene que 
+                comunicar con el host destino para establecer la comunicación.</p>
+            <br>
+            <div class="imagenPDU">
+                <img src="./osipdusdu.png" alt="">
+            </div>     
         </section>
         <section id="ClienteServidor">
             <br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -178,7 +232,9 @@
             <br>
             <p>No existe un nodo central, hay un colectivo diversos de puntos de conexión, varios nodos se conectan entre si y estos a los clientes. Si un nodo se cae la red continua funcionando. El principio de una red descentralizada es la participación o adhesión.</p>
             <br>
-            <p><strong>Ejemplo: </strong>Redes Torrent con el fin de compartir archivos y Redes Blockchain que se encargan de compartir información de los registros financieros de toda la red, de esta forma se evitan fraudes.</p>
+            <p><strong>Ejemplo 1: </strong>Redes Torrent con el fin de compartir archivos.</p>
+            <br>
+            <p><strong>Ejemplo 2:</strong>Redes Blockchain que se encargan de compartir información de los registros financieros de toda la red, de esta forma se evitan fraudes.</p>
         </section>
     </main>
     <footer>

@@ -136,6 +136,12 @@ los items (ul) del menu que pertenezcan a ese li */
     margin-right: auto;
 }
 
+.imagenPDU {
+    width: 670px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* grid  */
 #GridContainer {
     margin: 0px;
@@ -345,9 +351,9 @@ los items (ul) del menu que pertenezcan a ese li */
 .EnlaceDatosProtoc {
     grid-column: 4;
     grid-row-start: 7;
-    grid-row-end: 9;
+    grid-row-end: 10;
     background-color: rgb(109, 230, 139);
-    height: 10.5rem;
+    height: 16rem;
 }
 
 .FisicaOSI {
@@ -364,12 +370,7 @@ los items (ul) del menu que pertenezcan a ese li */
     background-color: rgb(109, 230, 139);
 }
 
-.FisicaProtoc {
-    grid-column: 4;
-    grid-row-start: 9;
-    grid-row-end: 10;
-    background-color: rgb(109, 230, 139);
-}
+
 #BreveOSI-TCPip h2 {
     text-align: justify;
 }
