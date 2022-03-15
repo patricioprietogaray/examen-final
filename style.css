@@ -378,7 +378,7 @@ los items (ul) del menu que pertenezcan a ese li */
     text-align: justify;
 }
 
-#Encapsulamiento>ul{
+#Encapsulamiento>ul, #ClienteServidor>ul{
     list-style-type: disc;
     margin-left: 3rem;
     text-align: justify;
