@@ -331,9 +331,82 @@
             <br>
             <h2>Explicar el modelo P2P y cite 2 ejemplos</h2>
             <br><br>
-            <p>El concepto de cliente/servidor no es igual a peer-to-peer, en este caso los ordenadores son iguales entre si, se conectan en forma directa compartiendo archivos, de forma tal que cada ordenador puede ser cliente y servidor a la vez, (entiéndase que no es lo mismo que cliente/servidor). Hay aplicaciones que se apoyan en los datos que se almacenan en un servidor, para identificar los hosts y la información que estos contienen. En sus comienzos internet fue P2P.</p>
+            <p>El concepto de cliente/servidor no es igual a peer-to-peer, en este caso los 
+                ordenadores son iguales entre si, sin clientes y sin servidores
+                 se conectan en forma directa compartiendo 
+                archivos, de forma tal que cada ordenador puede ser cliente y servidor a la vez, 
+                (entiéndase que no es lo mismo que cliente/servidor). Hay aplicaciones que se 
+                apoyan en los datos que se almacenan en un servidor, para identificar los hosts y 
+                la información que estos contienen. En sus comienzos internet fue P2P.
+            </p>
             <br>
-            <p>No existe un nodo central, hay un colectivo diversos de puntos de conexión, varios nodos se conectan entre si y estos a los clientes. Si un nodo se cae la red continua funcionando. El principio de una red descentralizada es la participación o adhesión.</p>
+            <p>
+                No confundir peer-to-peer con point-to-point, estas últimas es una red de puntos
+                a punto, la cual es una red 2 computadoras conectadas entre si de manera exclusiva,
+                sin otro computador mas que esos dos.
+            </p>
+            <br>
+            <p>
+                Las redes P2P son utiles para compartir archivos de cualquier tipo y tambien para la
+                telefonía <strong>VoIP</strong> para hacer eficiente las transmisiones de voz. También
+                administran el ancho de banda optimizandolo de manera que quien reciba un archivo, lo
+                haga a una velocidad máxima de descarga.
+            </p>
+            <br>
+            <br>
+            
+            <h3>Características de las redes P2P:</h3>
+            <br>
+            <ul>
+                <li><strong>Escalabilidad: </strong>Las redes P2P tienen un alcance mundial con cientos de millones de usuarios potenciales. En general, lo deseable es que cuantos más nodos estén conectados a una red P2P, mejor será su funcionamiento. Así, cuando los nodos llegan y comparten sus propios recursos, los recursos totales del sistema aumentan. Esto es diferente en una arquitectura del modo servidor-cliente con un sistema fijo de servidores, en los cuales la adición de clientes podría significar una transferencia de datos más lenta para todos los usuarios. Algunos autores advierten que, si proliferan mucho este tipo de redes, cliente-servidor, podrían llegar a su fin, ya que a cada una de estas redes se conectarán muy pocos usuarios.</li>
+                <br>
+                <li><strong>Robustez: </strong>La naturaleza distribuida de las redes peer-to-peer también incrementa la robustez en caso de haber fallos en la réplica excesiva de los datos hacia múltiples destinos, y —-en sistemas P2P puros—- permitiendo a los peers encontrar la información sin hacer peticiones a ningún servidor centralizado de indexado. En el último caso, no hay ningún punto singular de falla en el sistema.</li>
+                <br>
+                <li><strong>Descentralización: </strong>Estas redes por definición son descentralizadas y todos los nodos son iguales. No existen nodos con funciones especiales, y por tanto ningún nodo es imprescindible para el funcionamiento de la red. En realidad, algunas redes comúnmente llamadas P2P no cumplen esta característica, como Napster, eDonkey o BitTorrent.</li>
+                <br>
+                <li><strong>Distribución de costes entre los usuarios: </strong>Se comparten o donan recursos a cambio de recursos. Según la aplicación de la red, los recursos pueden ser archivos, ancho de banda, ciclos de proceso o almacenamiento de disco.</li>
+                <br>
+                <li><strong>Anonimato: </strong>s deseable que en estas redes quede anónimo el autor de un contenido, el editor, el lector, el servidor que lo alberga y la petición para encontrarlo, siempre que así lo necesiten los usuarios. Muchas veces el derecho al anonimato y los derechos de autor son incompatibles entre sí, y la industria propone mecanismos como el DRM para limitar ambos.</li>
+                <br>
+                <li><strong>Seguridad: </strong>Es una de las características deseables de las redes P2P menos implementada. Los objetivos de un P2P seguro serían identificar y evitar los nodos maliciosos, evitar el contenido infectado, evitar el espionaje de las comunicaciones entre nodos, creación de grupos seguros de nodos dentro de la red, protección de los recursos de la red... La mayor parte de los nodos aún están bajo investigación, pero los mecanismos más prometedores son: cifrado multiclave, cajas de arena, gestión de derechos de autor (la industria define qué puede hacer el usuario; por ejemplo, la segunda vez que se oye la canción se apaga), reputación (permitir acceso sólo a los conocidos), comunicaciones seguras, comentarios sobre los ficheros, etc.</li>
+            </ul>
+            <br><br>
+            <h3>Problemas con la conexión</h3>
+            <br>
+            <p>
+                La mayor parte de los nodos de Internet no disponen de una dirección IP fija 
+                y no son accesible para otros nodos de Internet. Lod nodos se conectan con las
+                redes locales con ayuda de los cortafuegos y NATs conectados por medio de los 
+                ISPs del mundo. Para el correcto funcionamiento de una red P2P, hay que resolver 
+                dos problemas fundamentales: cómo se encuentra un nodo que ya esté conectado a la red 
+                P2P y cómo se conectan los nodos sin dirección IP pública entre ellos. 
+            </p>
+            <p>
+                Para resolver el primer problema, la solución habitual es realizar una conexión 
+                a un servidor (o servidores) inicial con dirección bien conocida (normalmente IP 
+                fija) que el programa P2P tiene almacenada. Este servidor inicial se encarga de 
+                mantener una lista con las direcciones de otros nodos que están actualmente 
+                conectados a la red. Tras esto, los clientes ya tienen información suficiente 
+                para entrar en la red y pueden intercambiar información con otros nodos, ya sin 
+                intervención de los servidores iniciales.
+            </p>
+            <p>
+                Para resolver el problema de conexión cuando los nodos no tienen dirección pública, estos se conectan a través de otro nodo que funciona como proxy de la conexión. Los dos nodos se conectan al proxy y este envía la información que llega de uno al otro. Cualquier nodo con una dirección IP pública puede ser escogido como proxy de una conexión entre dos nodos. Por ejemplo, en la red Skype a través de nuestro ordenador pueden pasar conversaciones de otras personas. En estos casos, es imprescindible la implementación de algún mecanismo de seguridad para evitar que los proxies pueden llegar a entender la comunicación entre los dos nodos.
+            </p>
+            <br><br>
+            <h3>Redes P2P segun su tipo de centralización</h3>
+            <br>
+            <ul>
+                <li><strong>Redes P2P centralizadas</strong>
+                    Este tipo de red P2P se basa en una arquitectura monolítica en la que todas las transacciones se hacen a través de un único servidor que sirve de punto de enlace entre dos nodos y que, a la vez, almacena y distribuye los nodos donde se almacenan los contenidos.</li>
+                <br>
+                <li><strong>Redes P2P híbridas, semicentralizadas o mixtas</strong>En este tipo de red, se puede observar la interacción entre un servidor central que sirve como hub y administra los recursos de banda ancha, enrutamientos y comunicación entre nodos pero sin saber la identidad de cada nodo y sin almacenar información alguna, por lo que el servidor no comparte archivos de ningún tipo a ningún nodo. Tiene la peculiaridad de funcionar (en algunos casos como en Torrent) de ambas maneras, es decir, puede incorporar más de un servidor que gestione los recursos compartidos, pero también, en caso de que el servidor o los servidores que gestionan todo caigan, el grupo de nodos puede seguir en contacto a través de una conexión directa entre ellos mismos, con lo que es posible seguir compartiendo y descargando más información en ausencia de los servidores.</li>
+                <br>
+                <li><strong>Redes P2P «puras» o totalmente descentralizadas</strong>Las redes P2P de este tipo son las más comunes, siendo las más versátiles al no requerir de un gestionamiento central de ningún tipo, lo que permite una reducción de la necesidad de usar un servidor central, por lo que se opta por los mismos usuarios como nodos de esas conexiones y también como almacenadores de esa información. En otras palabras, todas las comunicaciones son directamente de usuario a usuario con ayuda de un nodo (que es otro usuario) quien permite enlazar esas comunicaciones. </li>
+            </ul>
+
+
+            
             <br>
             <p><strong>Ejemplo 1: </strong>Redes Torrent con el fin de compartir archivos.</p>
             <br>
